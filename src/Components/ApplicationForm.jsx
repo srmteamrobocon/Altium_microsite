@@ -1,6 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const ApplicationForm = () => {
+  const [formValid, setFormValid] = useState(true);
+  // FORM VALIDATION
+  const validateForm = () => {
+    const { firstName, lastName, phone, email, registrationNumber, branch } = userdata;
+
+    const phonePattern = /^\+91\d{10}$/;
+    const emailPattern = /[a-zA-Z0-9._%+-]+@srmist\.edu\.in$/;
+    const regNumberPattern = /^RA\d{13}$/;
+
+    const isFirstNameValid = !!firstName.trim();
+    const isLastNameValid = !!lastName.trim();
+    const isPhoneValid = phonePattern.test(phone);
+    const isEmailValid = emailPattern.test(email);
+    const isRegNumberValid = regNumberPattern.test(registrationNumber);
+    const isBranchValid = !!branch.trim();
+
+    const isFormValid =
+      isFirstNameValid &&
+      isLastNameValid &&
+      isPhoneValid &&
+      isEmailValid &&
+      isRegNumberValid &&
+      isBranchValid;
+
+    setFormValid(isFormValid);
+
+    return isFormValid;
+  };
+
+
+  const [userdata, setuserdata] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    registrationNumber: "",
+    branch: "",
+  });
+
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+
+    setuserdata({ ...userdata, [name]: value });
+  };
+
+  // CONNECT WITH FIREBASE
+  const submitData = async (event) => {
+    event.preventDefault();
+
+    const isFormValid = validateForm();
+
+    if (!isFormValid) {
+      alert("Please fill all fields correctly.");
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        'https://robo-altium-default-rtdb.firebaseio.com/userDataRecords.json',
+        {
+          firstName: userdata.firstName,
+          lastName: userdata.lastName,
+          phone: userdata.phone,
+          email: userdata.email,
+          registrationNumber: userdata.registrationNumber,
+          branch: userdata.branch,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        setuserdata({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          registrationNumber: "",
+          branch: "",
+        })
+        alert("Data Stored Successfully");
+      } else {
+        alert("Failed to store data");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while storing data");
+    }
+  };
+
+
+
   return (
     <>
       <form className="p-4 dark:bg-gray-950 dark:text-white m-2 rounded-xl">
@@ -8,10 +106,12 @@ const ApplicationForm = () => {
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="text"
-              name="floating_first_name"
+              name="firstName"
               id="floating_first_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
+              value={userdata.firstName}
+              onChange={postUserData}
               required
             />
             <label
@@ -24,10 +124,12 @@ const ApplicationForm = () => {
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="text"
-              name="floating_last_name"
+              name="lastName"
               id="floating_last_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
+              value={userdata.lastName}
+              onChange={postUserData}
               required
             />
             <label
@@ -40,10 +142,12 @@ const ApplicationForm = () => {
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="tel"
-              name="floating_phone"
+              name="phone"
               id="floating_phone"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
+              value={userdata.phone}
+              onChange={postUserData}
               required
               pattern="^\+91\d{10}$"
               title="Please enter a 10-digit phone number with +91."
@@ -58,10 +162,12 @@ const ApplicationForm = () => {
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="email"
-              name="floating_email"
+              name="email"
               id="floating_email"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
+              value={userdata.email}
+              onChange={postUserData}
               required
               pattern="[a-zA-Z0-9._%+-]+@srmist\.edu\.in$"
               title="Without '@srmist.edu.in' Our owl won't fly."
@@ -77,10 +183,12 @@ const ApplicationForm = () => {
         <div className="relative z-0 w-full mb-6 group">
           <input
             type="text"
-            name="repeat_ranumber"
+            name="registrationNumber"
             id="floating_repeat_ranumber"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
+            value={userdata.registrationNumber}
+            onChange={postUserData}
             required
             pattern="^RA\d{13}$"
             title="Registration Number must start with 'RA' and be 15 characters in length."
@@ -95,10 +203,12 @@ const ApplicationForm = () => {
         <div className="relative z-0 w-full mb-6 group">
           <input
             type="text"
-            name="floating_branch"
+            name="branch"
             id="floating_branch"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
+            value={userdata.branch}
+            onChange={postUserData}
             required
           />
           <label
@@ -111,6 +221,7 @@ const ApplicationForm = () => {
         <button
           type="submit"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={submitData}
         >
           Submit
         </button>
