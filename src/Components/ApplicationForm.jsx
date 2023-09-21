@@ -101,7 +101,7 @@ const ApplicationForm = () => {
 
   return (
     <>
-      <form className="p-4 dark:bg-gray-950 dark:text-white m-2 rounded-xl">
+      <form className="p-4 dark:bg-gray-950 dark:text-white m-2 rounded-xl" id="apply">
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-6 group">
             <input

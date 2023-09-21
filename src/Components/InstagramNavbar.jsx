@@ -3,16 +3,6 @@ import Homeimg from '../assets/home_icon.svg';
 import applyimg from '../assets/apply_icon.png';
 import aboutimg from '../assets/about_icon.svg';
 import contactimg from '../assets/contact_icon.svg';
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-  Card,
-} from "@material-tailwind/react";
-
-
 
 const InstagramNavbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Set the threshold width for mobile view
@@ -44,16 +34,16 @@ const InstagramNavbar = () => {
         <nav className="fixed bottom-0 w-full bg-opacity-70 backdrop-blur-sm z-10">
           <div className="flex justify-between mx-4 p-2">
             <a href="#" className="p-1">
-              <img src={Homeimg} alt="Home" className="w-6 h-6" />
+              <img src={Homeimg} alt="Home" className="w-6 h-6 dark:invert" />
             </a>
             <a href="#" className="p-1">
-              <img src={aboutimg} alt="About" className="w-6 h-6" />
+              <img src={aboutimg} alt="About" className="w-6 h-6 dark:invert" />
+            </a>
+            <a href="#apply" className="p-1">
+              <img src={applyimg} alt="Apply" className="w-6 h-6 dark:invert" />
             </a>
             <a href="#" className="p-1">
-              <img src={applyimg} alt="Apply" className="w-6 h-6" />
-            </a>
-            <a href="#" className="p-1">
-              <img src={contactimg} alt="Apply" className="w-6 h-6" />
+              <img src={contactimg} alt="Apply" className="w-6 h-6 dark:invert" />
             </a>
           </div>
         </nav>
@@ -79,7 +69,7 @@ const InstagramNavbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <a href="#apply" className="hover:text-blue-500">
                 Apply
               </a>
             </li>
