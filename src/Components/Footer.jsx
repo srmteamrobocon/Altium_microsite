@@ -54,7 +54,7 @@ const Footer = () => {
                     <div className="row p-4 pb-7">
                         <div className="">
                             <hr />
-                            <p className="flex justify-center text-center mt-2">Innovation in Every Byte,<br/> © 2023 SRM Team Robocon</p>
+                            <p className="flex justify-center text-center mt-2">Innovation in Every Byte,<br /> © 2023 SRM Team Robocon</p>
                         </div>
                     </div>
                 </div>
