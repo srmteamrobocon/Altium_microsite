@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/Robocon_logo.gif";
-import SRM from "../assets/srm_logo.png";
+import SRM from "../assets/SRM_logo.png";
 import Linkedin from "../assets/linkedin.svg";
 import Insta from "../assets/instagram.svg";
 

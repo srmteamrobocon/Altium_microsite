@@ -14,7 +14,7 @@ function App() {
         <InstagramNavbar />
         {/* <Hero /> */}
         <ApplicationForm />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   )
