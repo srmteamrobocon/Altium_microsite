@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import ApplicationForm from './Components/ApplicationForm'
+import Hero from './Components/Hero'
+import InstagramNavbar from './Components/InstagramNavbar'
 import './App.css'
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
 
   return (
     <>
+      <InstagramNavbar />
+      <Hero />
       <ApplicationForm />
     </>
   )
