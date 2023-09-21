@@ -33,6 +33,9 @@ const InstagramNavbar = () => {
     return (
       <>
         <Hero />
+        <a href="#" className="text-2xl font-bold fixed bg-opacity-70 backdrop-blur-sm top-0 w-screen text-white flex justify-center">
+          SRM Team Robocon
+        </a>
         <div className="relative">
           <nav className="fixed bottom-0 w-full bg-opacity-70 backdrop-blur-sm z-10">
             <div className="flex justify-between mx-4 p-2">
@@ -58,7 +61,7 @@ const InstagramNavbar = () => {
     return (
       <>
         <Hero />
-        <nav className="fixed bg-blue-gray-900 bg-opacity-70 backdrop-blur-sm text-black dark:text-white py-4 top-0 z-10 w-screen">
+        <nav className="fixed bg-blue-gray-900 bg-opacity-70 backdrop-blur-sm text-white py-4 top-0 z-10 w-screen">
           <div className="container mx-auto flex justify-between items-center">
             <a href="#" className="text-2xl font-bold">
               SRM Team Robocon
