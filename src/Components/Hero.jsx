@@ -1,6 +1,10 @@
 import React from 'react';
+import "animate.css";
 import backgroundImageDesktop from '../assets/altium_desktop.jpg'; // Desktop background image
 import backgroundImageMobile from '../assets/Altium_mobile.jpg';   // Mobile background image
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
     const isMobile = window.innerWidth < 769; // Check if the screen width is below 769px
@@ -18,6 +22,15 @@ const Hero = () => {
                     <h1 className="text-4xl font-semibold mb-4">Altium Workshop</h1>
                     <p className="text-lg">Learn Altium Designer for PCB Design</p>
                 </div>
+            </div>
+            <div className="absolute bottom-0 mb-10 text-white text-center w-full">
+                <p className="animate__animated animate__bounce animate__infinite animate__delay-1s animate__slow text-md sm:text-xl">
+                    Scroll down
+                </p>
+                <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="animate__animated animate__fadeInDown animate__infinite animate__slow animate__delay-1s text-3xl"
+                />
             </div>
         </div>
     );

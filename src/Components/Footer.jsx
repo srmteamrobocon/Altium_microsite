@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="footer-middle p-4 overflow-hidden text-center md:text-left w-screen">
                     {/* Center the text on desktop screens */}
                     <div className="md:flex md:items-center md:justify-between">
-                        <div className="p-2 ml-4">
+                        <div className="p-2 md:ml-10">
                             <img
                                 src={Logo}
                                 alt="ROBOCON LOGO"
@@ -43,7 +43,7 @@ const Footer = () => {
                                 SRMIST, Kattankulathur, Chennai (603203)
                             </p>
                         </div>
-                        <div className="p-2 mr-4">
+                        <div className="p-2 md:mr-10">
                             <img
                                 src={SRM}
                                 alt="SRM LOGO"

@@ -3,6 +3,7 @@ import Homeimg from '../assets/home_icon.svg';
 import applyimg from '../assets/apply_icon.png';
 import aboutimg from '../assets/about_icon.svg';
 import contactimg from '../assets/contact_icon.svg';
+import Robocon_logo from '../assets/Robocon_logo.gif';
 import Hero from './Hero';
 
 const InstagramNavbar = () => {
@@ -35,6 +36,7 @@ const InstagramNavbar = () => {
         <Hero />
         <div className='relative'>
           <a href="#" className="w-screen text-2xl font-bold fixed top-0 bg-opacity-70 backdrop-blur-sm z-10 text-white flex justify-center">
+            <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-8 mr-6" />
             SRM Team Robocon
           </a>
         </div>
@@ -63,9 +65,10 @@ const InstagramNavbar = () => {
     return (
       <>
         <Hero />
-        <nav className="fixed bg-blue-gray-900 bg-opacity-70 backdrop-blur-sm text-white py-4 top-0 z-10 w-screen">
+        <nav className="fixed bg-blue-gray-900 bg-opacity-70 backdrop-blur-sm text-white py-2 top-0 z-10 w-screen">
           <div className="container mx-auto flex justify-between items-center">
-            <a href="#" className="text-2xl font-bold">
+            <a href="#" className="text-2xl font-bold flex justify-center">
+              <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-10 h-10 mr-6" />
               SRM Team Robocon
             </a>
             <ul className="flex space-x-6">

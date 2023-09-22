@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@heroicons/react": "^2.0.18",
+    "animate.css": "^4.1.1",
     "axios": "^1.5.0",
     "firebase": "^10.4.0",
     "framer-motion": "^10.16.4",
