@@ -36,7 +36,7 @@ const InstagramNavbar = () => {
         <Hero />
         <div className='relative'>
           <a href="#" className="w-screen text-2xl font-bold fixed top-0 bg-opacity-70 backdrop-blur-sm z-10 text-white flex justify-center">
-            <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-8 mr-6" />
+            <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-8 mr-2" />
             SRM Team Robocon
           </a>
         </div>
@@ -68,7 +68,7 @@ const InstagramNavbar = () => {
         <nav className="fixed bg-blue-gray-900 bg-opacity-70 backdrop-blur-sm text-white py-2 top-0 z-10 w-screen">
           <div className="container mx-auto flex justify-between items-center">
             <a href="#" className="text-2xl font-bold flex justify-center">
-              <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-10 h-10 mr-6" />
+              <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-10 h-10 mr-4" />
               SRM Team Robocon
             </a>
             <ul className="flex space-x-6">
