@@ -23,7 +23,7 @@ const Hero = () => {
                     <p className="text-lg">Learn Altium Designer for PCB Design</p>
                 </div>
             </div>
-            <div className="absolute bottom-0 mb-10 text-white text-center w-full">
+            <div className="absolute bottom-0 mb-16 text-white text-center w-full">
                 <p className="animate__animated animate__bounce animate__infinite animate__delay-1s animate__slow text-md sm:text-xl">
                     Scroll down
                 </p>
