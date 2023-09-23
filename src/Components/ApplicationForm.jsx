@@ -39,12 +39,12 @@ const ApplicationForm = () => {
     setFormValid(isFormValid);
 
     setErrors({
-      firstName: isFirstNameValid ? "" : "We know you have a name.",
-      lastName: isLastNameValid ? "" : "Last name is required.",
-      phone: isPhoneValid ? "" : "Please enter a valid 10-digit phone number.",
-      email: isEmailValid ? "" : "Without '@srmist.edu.in' Our owl won't fly.",
-      registrationNumber: isRegNumberValid ? "" : "Registration number must start with 'RA'.",
-      branch: isBranchValid ? "" : "Department is required.",
+      firstName: isFirstNameValid ? "" : "Oopsie-doodle! Missing first name, human friend.",
+      lastName: isLastNameValid ? "" : "Greetings, incomplete human! A last name is missing.",
+      phone: isPhoneValid ? "" : "10 digits, please! Phone number, not gibberish.",
+      email: isEmailValid ? "" : "Use your SRM email to keep the owls flying!",
+      registrationNumber: isRegNumberValid ? "" : "Robot says: Error! Your RA number must start with 'RA'.",
+      branch: isBranchValid ? "" : "Boop! Specify your department, it's important. ",
     });
 
     return isFormValid;
@@ -120,7 +120,7 @@ const ApplicationForm = () => {
 
   return (
     <>
-      <p className="text-3xl font-bold dark:text-white text-center pb-4">APPLY NOW</p>
+      <p className="text-3xl font-bold dark:text-white text-center pb-4 ">APPLY NOW</p>
       <form className="p-4 dark:bg-gray-900 dark:text-white m-2 rounded-xl" id="apply">
         <div className="md:grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-6 group">
