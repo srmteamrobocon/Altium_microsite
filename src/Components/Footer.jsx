@@ -19,9 +19,9 @@ const Footer = () => {
                             />
                         </div>
                         <div className="flex flex-col justify-center text-center">
-                            <p className="my-0 text-2xl font-bold">SRM TEAM ROBOCON</p>
+                            <p className="my-0 md:text-3xl text-2xl font-bold">SRM TEAM ROBOCON</p>
                             <h3 className="text-xl">Robotics Reimagined</h3>
-                            <div className="flex justify-center text-center p-2 dark:invert">
+                            <div className="flex justify-center text-center p-1 dark:invert">
                                 <a
                                     href="https://in.linkedin.com/company/srmteamrobocon/"
                                     target="_blank"
@@ -36,6 +36,11 @@ const Footer = () => {
                                 >
                                     <img className="h-8 w-8" src={Insta} alt="Linkedin" />
                                 </a>
+
+                            </div>
+                            <div className="flex justify-center p-1">
+                                <a href="tel:123-456-7890" className="underline dark:text-white">123-456-7890</a>
+                                <a href="mailto:info@example.com" className="underline dark:text-white ml-4">info@example.com</a>
                             </div>
                             <p className="">
                                 604, 5th Floor, Basic Engineering Lab,
@@ -51,7 +56,7 @@ const Footer = () => {
                             />
                         </div>
                     </div>
-                    <div className="row p-4 pb-7">
+                    <div className="row p-4 pb-7 md:pb-0">
                         <div className="">
                             <hr />
                             <p className="flex justify-center text-center mt-2">Innovation in Every Byte,<br /> © 2023 SRM Team Robocon</p>

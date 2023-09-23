@@ -16,7 +16,7 @@ function App() {
         <InstagramNavbar />
         {/* THE HERO-SECTION IS HANDLED BY THE NAVBAR COMPONENT */}
         <About />
-        <Speaker />
+        {/* <Speaker /> */}
         <ApplicationForm />
         <Footer />
       </div>

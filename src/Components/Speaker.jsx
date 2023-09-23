@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../assets/Altium_mobile.jpg";
+import Img from "../assets/Roel.jpg";
 
 const Speaker = () => {
     return (
@@ -10,11 +10,11 @@ const Speaker = () => {
                     alt="Speaker Image"
                     className="w-56 h-72 object-cover object-center"
                 />
-                <div className="absolute dark:bg-gray-50 bg-gray-950 -bottom-[120px] w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-                    <span className="text-lime-400 font-bold text-xl">Roel Pais</span>
-                    <span className="dark:text-gray-800 text-white font-bold text-3xl">Cheat Sheet</span>
+                <div className="absolute dark:bg-gray-50 bg-gray-950 -bottom-[105px] w-56 p-3 flex flex-col group-hover:-bottom-0 group-hover:duration-600 duration-500">
+                    <span className="text-lime-400 font-bold text-2xl">Roel Pais</span>
+                    {/* <span className="dark:text-gray-800 text-white font-bold text-3xl">Cheat Sheet</span> */}
                     <p className="dark:text-neutral-800 text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Diligent engineering student, innovation enthusiast, and collaborative leader.
                     </p>
                 </div>
             </div>
