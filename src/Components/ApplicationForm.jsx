@@ -7,7 +7,7 @@ const ApplicationForm = () => {
   const validateForm = () => {
     const { firstName, lastName, phone, email, registrationNumber, branch } = userdata;
 
-    const phonePattern = /^\+91\d{10}$/;
+    const phonePattern = /^\d{10}$/;
     const emailPattern = /[a-zA-Z0-9._%+-]+@srmist\.edu\.in$/;
     const regNumberPattern = /^RA\d{13}$/;
 
@@ -149,7 +149,7 @@ const ApplicationForm = () => {
               value={userdata.phone}
               onChange={postUserData}
               required
-              pattern="^\+91\d{10}$"
+              pattern="^\d{10}$"
               title="Please enter a 10-digit phone number with +91."
             />
             <label
@@ -215,7 +215,7 @@ const ApplicationForm = () => {
             htmlFor="floating_branch"
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Branch
+            Department
           </label>
         </div>
         <button

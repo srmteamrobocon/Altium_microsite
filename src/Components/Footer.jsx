@@ -38,7 +38,7 @@ const Footer = () => {
                                 </a>
                             </div>
                             <p className="">
-                                BEL 604, 5th Floor, Basic Engineering Lab,
+                                604, 5th Floor, Basic Engineering Lab,
                                 <br />
                                 SRMIST, Kattankulathur, Chennai (603203)
                             </p>
