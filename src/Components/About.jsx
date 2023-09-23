@@ -3,7 +3,7 @@ import Img from "../assets/Roel.jpg";
 
 const About = () => {
     return (
-        <section className="bg-gradient-to-b from-custom_dark to-grey-950 text-white py-16">
+        <section className="bg-gradient-to-b from-custom_dark to-grey-950 text-white py-16" id="about">
             <div className="container mx-auto text-center text-black dark:text-white">
                 <h2 className="text-3xl font-semibold mb-8">About the Altium PCB Workshop</h2>
                 <p className="text-lg mb-12">
