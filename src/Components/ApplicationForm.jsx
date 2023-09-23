@@ -3,6 +3,16 @@ import axios from "axios";
 
 const ApplicationForm = () => {
   const [formValid, setFormValid] = useState(true);
+
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    registrationNumber: "",
+    branch: "",
+  });
+
   // FORM VALIDATION
   const validateForm = () => {
     const { firstName, lastName, phone, email, registrationNumber, branch } = userdata;
@@ -27,6 +37,15 @@ const ApplicationForm = () => {
       isBranchValid;
 
     setFormValid(isFormValid);
+
+    setErrors({
+      firstName: isFirstNameValid ? "" : "We know you have a name.",
+      lastName: isLastNameValid ? "" : "Last name is required.",
+      phone: isPhoneValid ? "" : "Please enter a valid 10-digit phone number.",
+      email: isEmailValid ? "" : "Without '@srmist.edu.in' Our owl won't fly.",
+      registrationNumber: isRegNumberValid ? "" : "Registration number must start with 'RA'.",
+      branch: isBranchValid ? "" : "Department is required.",
+    });
 
     return isFormValid;
   };
@@ -114,6 +133,7 @@ const ApplicationForm = () => {
               value={userdata.firstName}
               onChange={postUserData}
               required
+              title="We know you have a name"
             />
             <label
               htmlFor="floating_first_name"
@@ -121,6 +141,7 @@ const ApplicationForm = () => {
             >
               First name
             </label>
+            <div className="text-red-500 text-sm">{errors.firstName}</div>
           </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
@@ -139,6 +160,7 @@ const ApplicationForm = () => {
             >
               Last name
             </label>
+            <div className="text-red-500 text-sm">{errors.lastName}</div>
           </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
@@ -151,7 +173,7 @@ const ApplicationForm = () => {
               onChange={postUserData}
               required
               pattern="^\d{10}$"
-              title="Please enter a 10-digit phone number with +91."
+              title="Please enter a 10-digit phone number."
             />
             <label
               htmlFor="floating_phone"
@@ -159,6 +181,7 @@ const ApplicationForm = () => {
             >
               Phone number
             </label>
+            <div className="text-red-500 text-sm">{errors.phone}</div>
           </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
@@ -179,6 +202,7 @@ const ApplicationForm = () => {
             >
               SRM Email address
             </label>
+            <div className="text-red-500 text-sm">{errors.email}</div>
           </div>
         </div>
         <div className="relative z-0 w-full mb-6 group">
@@ -200,6 +224,7 @@ const ApplicationForm = () => {
           >
             Registration Number
           </label>
+          <div className="text-red-500 text-sm">{errors.registrationNumber}</div>
         </div>
         <div className="relative z-0 w-full mb-6 group">
           <input
@@ -218,6 +243,7 @@ const ApplicationForm = () => {
           >
             Department
           </label>
+          <div className="text-red-500 text-sm">{errors.branch}</div>
         </div>
         <button
           type="submit"
