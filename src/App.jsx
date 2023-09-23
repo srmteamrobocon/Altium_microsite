@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import ApplicationForm from './Components/ApplicationForm'
-import Hero from './Components/Hero'
 import InstagramNavbar from './Components/InstagramNavbar'
 import About from './Components/About'
-import Speaker from './Components/Speaker'
 import Footer from './Components/Footer'
 import './App.css'
 
@@ -16,7 +14,6 @@ function App() {
         <InstagramNavbar />
         {/* THE HERO-SECTION IS HANDLED BY THE NAVBAR COMPONENT */}
         <About />
-        {/* <Speaker /> */}
         <ApplicationForm />
         <Footer />
       </div>
