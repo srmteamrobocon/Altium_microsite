@@ -6,7 +6,7 @@ import Insta from "../assets/instagram.svg";
 
 const Footer = () => {
     return (
-        <footer className="text-black dark:text-white">
+        <footer className="text-black dark:text-white" id="footer">
             <div className="container">
                 <div className="footer-middle p-4 overflow-hidden text-center md:text-left w-screen">
                     {/* Center the text on desktop screens */}

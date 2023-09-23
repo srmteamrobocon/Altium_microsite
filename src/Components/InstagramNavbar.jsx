@@ -52,7 +52,7 @@ const InstagramNavbar = () => {
               <a href="#apply" className="p-1">
                 <img src={applyimg} alt="Apply" className="w-6 h-6 dark:invert" />
               </a>
-              <a href="#" className="p-1">
+              <a href="#footer" className="p-1">
                 <img src={contactimg} alt="Apply" className="w-6 h-6 dark:invert" />
               </a>
             </div>
@@ -88,7 +88,7 @@ const InstagramNavbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500">
+                <a href="#footer" className="hover:text-blue-500">
                   Contact
                 </a>
               </li>
