@@ -120,8 +120,9 @@ const ApplicationForm = () => {
 
   return (
     <>
-      <p className="text-3xl font-bold dark:text-white text-center pb-4 ">APPLY NOW</p>
-      <form className="p-4 dark:bg-gray-900 dark:text-white m-2 rounded-xl" id="apply">
+    <hr id="apply" className="m-8"  />
+      <p className="text-3xl font-Orbitron font-bold dark:text-white text-center pb-4 pt-4 underline" >APPLY NOW</p>
+      <form className="p-4 dark:bg-gray-900 dark:text-white m-2 rounded-xl">
         <div className="md:grid md:grid-cols-2 md:gap-6">
           <div className="relative z-0 w-full mb-6 group">
             <input

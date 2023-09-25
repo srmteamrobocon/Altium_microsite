@@ -10,9 +10,10 @@ function App() {
 
   return (
     <>
-      <div className='dark:bg-gray-950 bg-white'>
-        <InstagramNavbar />
-        {/* THE HERO-SECTION IS HANDLED BY THE NAVBAR COMPONENT */}
+
+      <InstagramNavbar />
+      {/* THE HERO-SECTION IS HANDLED BY THE NAVBAR COMPONENT */}
+      <div className='dark:bg-gradient-to-b dark:from-custom_dark dark:via-indigo-950 dark:to-gray-950 dark:to-90% bg-white'>
         <About />
         <ApplicationForm />
         <Footer />

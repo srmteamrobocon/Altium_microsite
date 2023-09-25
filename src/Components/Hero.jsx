@@ -20,7 +20,7 @@ const Hero = () => {
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-white text-center">
                     <h1 className="text-4xl font-semibold mb-4">Altium Workshop</h1>
-                    <p className="text-lg">Learn Altium Designer for PCB Design</p>
+                    <p className="text-md">Design PCBs with Altium designer</p>
                 </div>
             </div>
             <div className="absolute bottom-0 mb-16 text-white text-center w-full">

@@ -3,7 +3,7 @@ import Img from "../assets/Roel.jpg";
 
 const About = () => {
     return (
-        <section className="bg-gradient-to-b from-custom_dark to-grey-950 text-white py-16" id="about">
+        <section className=" text-white py-16" id="about">
             <div className="container mx-auto text-center text-black dark:text-white">
                 <h2 className="text-3xl font-semibold mb-8">About the Altium PCB Workshop</h2>
                 <p className="text-lg mb-12">
@@ -37,11 +37,11 @@ const About = () => {
                     Space is limited, so reserve your spot today and take the first step towards becoming a proficient PCB designer with Altium Designer.
                 </p>
                 {/* Speaker Section */}
-                <h2 className="text-3xl font-semibold mb-4 p-4">Meet Our Speaker</h2>
+                <h2 className="text-3xl font-Orbitron font-semibold mb-4 p-4">Meet Our Speaker</h2>
 
             </div>
             <div className="flex justify-center items-center mt-2">
-                <div className="relative group duration-500 cursor-pointer group overflow-hidden text-gray-50 w-56 rounded-2xl hover:duration-700">
+                <div className="relative group duration-500 cursor-pointer group overflow-hidden text-gray-50 w-56 rounded-2xl hover:duration-700 shadow-lg">
                     <img
                         src={Img} // Replace with the URL of your image
                         alt="Speaker Image"
