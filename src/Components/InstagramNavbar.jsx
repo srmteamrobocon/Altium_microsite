@@ -67,7 +67,7 @@ const InstagramNavbar = () => {
         <Hero />
         <nav className="fixed bg-blue-gray-900 bg-opacity-70 backdrop-blur-sm text-white py-2 top-0 z-10 w-screen">
           <div className="container mx-auto flex justify-between items-center">
-            <a href="#" className="text-2xl font-bold flex justify-center">
+            <a href="#" className="text-3xl font-bold flex justify-center">
               <img src={Robocon_logo} alt="ROBOCON LOGO" className="w-10 h-10 mr-4" />
               SRM Team Robocon
             </a>

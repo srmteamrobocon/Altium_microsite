@@ -7,6 +7,9 @@ const db = getDatabase(app); //FIREBASE DATABASE
 
 const ApplicationForm = () => {
   const [formValid, setFormValid] = useState(true);
+  const [submitting, setSubmitting] = useState(false); // Track submission status
+  const [success, setSuccess] = useState(false); // Track success status
+
 
   const [errors, setErrors] = useState({
     firstName: "",
@@ -72,6 +75,7 @@ const ApplicationForm = () => {
     setuserdata({ ...userdata, [name]: value });
   };
 
+  //submitData FUNTION IS NOT USED ANYWHERE
   const submitData = async (event) => {
     event.preventDefault();
 
@@ -120,7 +124,7 @@ const ApplicationForm = () => {
   };
 
   // CONNECT WITH FIREBASE DATABASE
-  const dbRefPath = `Registrations/${userdata.registrationNumber}`; //FIREBASE DATABASE REFERENCE PATH
+  const dbRefPath = `Registrations/${userdata.registrationNumber}`; //FIREBASE DATABASE REFERENCE PATH FOR EACH USER
 
   const putData = (event) => {
     event.preventDefault(); // Prevent page reload
@@ -132,6 +136,10 @@ const ApplicationForm = () => {
       return;
     }
 
+    // Update button and reset success message
+    setSubmitting(true);
+    setSuccess(false);
+
     set(ref(db, dbRefPath), {
       FirstName: userdata.firstName,
       LastName: userdata.lastName,
@@ -142,6 +150,9 @@ const ApplicationForm = () => {
     })
       .then(() => {
         // The data was successfully set
+        setSubmitting(false); // Reset button state
+        setSuccess(true); // Show success message
+
         setuserdata({
           firstName: "",
           lastName: "",
@@ -155,6 +166,7 @@ const ApplicationForm = () => {
       .catch((error) => {
         console.error("Error:", error);
         alert("An error occurred while storing data");
+        setSubmitting(false); // Reset button state on error
       });
   };
 
@@ -289,11 +301,13 @@ const ApplicationForm = () => {
         </div>
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className={`text-white ${success ? "bg-green-500 dark:bg-green-500" : submitting ? "bg-green-900 pointer-events-none" : "bg-blue-700 hover:bg-blue-800"} focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
           onClick={putData}
+          disabled={submitting || success} // Disable the button when submitting or after success
         >
-          Submit
+          {submitting ? "Submitting..." : success ? "Submitted!" : "Submit"}
         </button>
+
       </form>
     </>
   );
