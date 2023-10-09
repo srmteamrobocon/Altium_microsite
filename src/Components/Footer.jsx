@@ -39,8 +39,8 @@ const Footer = () => {
 
                             </div>
                             <div className="flex justify-center p-1">
-                                <a href="tel:123-456-7890" className="underline dark:text-white">123-456-7890</a>
-                                <a href="mailto:info@example.com" className="underline dark:text-white ml-4">info@example.com</a>
+                                <a href="tel:6376785940" className="underline dark:text-white">6376785940</a>
+                                <a href="mailto:srmtechrobocon@gmail.com" className="underline dark:text-white ml-4">srmtechrobocon@gmail.com</a>
                             </div>
                             <p className="">
                                 604, 5th Floor, Basic Engineering Lab,
