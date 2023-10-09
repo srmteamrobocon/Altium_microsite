@@ -14,7 +14,7 @@ const About = () => {
                     <br />
                     Time : 9:00 am
                     <br />
-                    Venue : Digital image Processing Lab,<br /> Hi-Tech Building, Main Campus
+                    Venue : <span><a href="https://maps.app.goo.gl/ktk7RmfYyCDRR462A" target="_blank" >Digital Image Processing Lab,<br /> Hi-Tech Building, Main Campus</a></span>
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-2 pr-2">
                     <div className="md:text-left">
@@ -57,7 +57,7 @@ const About = () => {
                         <span className="text-lime-400 font-bold text-2xl">Roel Pais</span>
                         {/* <span className="dark:text-gray-800 text-white font-bold text-3xl">Cheat Sheet</span> */}
                         <p className="text-black">
-                        Dedicated engineering scholar, innovative advocate, and collaborative leader.
+                            Dedicated engineering scholar, innovative advocate, and collaborative leader.
                         </p>
                     </div>
                 </div>
