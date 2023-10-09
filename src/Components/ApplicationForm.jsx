@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { getDatabase, ref, set } from "firebase/database";
+import { app } from "../Firebase"
+
+const db = getDatabase(app); //FIREBASE DATABASE
 
 const ApplicationForm = () => {
   const [formValid, setFormValid] = useState(true);
@@ -68,7 +72,6 @@ const ApplicationForm = () => {
     setuserdata({ ...userdata, [name]: value });
   };
 
-  // CONNECT WITH FIREBASE
   const submitData = async (event) => {
     event.preventDefault();
 
@@ -116,11 +119,49 @@ const ApplicationForm = () => {
     }
   };
 
+  // CONNECT WITH FIREBASE DATABASE
+  const dbRefPath = `Registrations/${userdata.registrationNumber}`; //FIREBASE DATABASE REFERENCE PATH
+
+  const putData = (event) => {
+    event.preventDefault(); // Prevent page reload
+
+    const isFormValid = validateForm();
+
+    if (!isFormValid) {
+      alert("Please fill all fields correctly.");
+      return;
+    }
+
+    set(ref(db, dbRefPath), {
+      FirstName: userdata.firstName,
+      LastName: userdata.lastName,
+      Phone: userdata.phone,
+      Email: userdata.email,
+      Registration_Number: userdata.registrationNumber,
+      Branch: userdata.branch,
+    })
+      .then(() => {
+        // The data was successfully set
+        setuserdata({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          registrationNumber: "",
+          branch: "",
+        })
+        alert("Data Stored Successfully");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("An error occurred while storing data");
+      });
+  };
 
 
   return (
     <>
-    <hr id="apply" className="m-8"  />
+      <hr id="apply" className="m-8" />
       <p className="text-3xl font-Orbitron font-bold dark:text-white text-center pb-4 pt-4 underline" >APPLY NOW</p>
       <form className="p-4 dark:bg-gray-900 dark:text-white m-2 rounded-xl">
         <div className="md:grid md:grid-cols-2 md:gap-6">
@@ -249,7 +290,7 @@ const ApplicationForm = () => {
         <button
           type="submit"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          onClick={submitData}
+          onClick={putData}
         >
           Submit
         </button>
