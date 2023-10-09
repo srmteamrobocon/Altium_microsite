@@ -11,7 +11,7 @@ const firebaseConfig = {
     storageBucket: "robocon-6a7e7.appspot.com",
     messagingSenderId: "703559768857",
     appId: "1:703559768857:web:8fe32c157b538e31e98388",
-    databaseURL: "https://robocon-6a7e7-default-rtdb.firebaseio.com"
+    databaseURL: "https://robocon-6a7e7-default-rtdb.firebaseio.com" // DIPTAYAN'S DATABASE personal account
 };
 
 // Initialize Firebase
