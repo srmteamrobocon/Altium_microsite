@@ -13,7 +13,7 @@ function App() {
 
       <InstagramNavbar />
       {/* THE HERO-SECTION IS HANDLED BY THE NAVBAR COMPONENT */}
-      <div className='dark:bg-gradient-to-b dark:from-custom_dark dark:via-indigo-950 dark:to-gray-950 dark:to-90% bg-white'>
+      <div className='bg-gradient-to-b from-custom_dark via-indigo-950 to-gray-950 to-90% bg-white text-white'>
         <About />
         <ApplicationForm />
         <Footer />

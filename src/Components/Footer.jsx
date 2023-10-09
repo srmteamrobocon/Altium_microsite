@@ -6,7 +6,7 @@ import Insta from "../assets/instagram.svg";
 
 const Footer = () => {
     return (
-        <footer className="text-black dark:text-white" id="footer">
+        <footer className=" text-white" id="footer">
             <div className="container">
                 <div className="footer-middle p-4 overflow-hidden text-center md:text-left w-screen">
                     {/* Center the text on desktop screens */}
@@ -21,7 +21,7 @@ const Footer = () => {
                         <div className="flex flex-col justify-center text-center">
                             <p className="my-0 md:text-3xl text-2xl font-bold">SRM TEAM ROBOCON</p>
                             <h3 className="text-xl">Robotics Reimagined</h3>
-                            <div className="flex justify-center text-center p-1 dark:invert">
+                            <div className="flex justify-center text-center p-1 invert">
                                 <a
                                     href="https://in.linkedin.com/company/srmteamrobocon/"
                                     target="_blank"
@@ -39,8 +39,8 @@ const Footer = () => {
 
                             </div>
                             <div className="flex justify-center p-1">
-                                <a href="tel:6376785940" className="underline dark:text-white">6376785940</a>
-                                <a href="mailto:srmtechrobocon@gmail.com" className="underline dark:text-white ml-4">srmtechrobocon@gmail.com</a>
+                                <a href="tel:6376785940" className="underline text-white">6376785940</a>
+                                <a href="mailto:srmtechrobocon@gmail.com" className="underline text-white ml-4">srmtechrobocon@gmail.com</a>
                             </div>
                             <p className="">
                                 604, 5th Floor, Basic Engineering Lab,

@@ -44,16 +44,16 @@ const InstagramNavbar = () => {
           <nav className="fixed bottom-0 w-full bg-opacity-70 backdrop-blur-sm z-10">
             <div className="flex justify-between mx-4 p-2">
               <a href="#" className="p-1">
-                <img src={Homeimg} alt="Home" className="w-6 h-6 dark:invert" />
+                <img src={Homeimg} alt="Home" className="w-6 h-6 invert" />
               </a>
               <a href="#about" className="p-1">
-                <img src={aboutimg} alt="About" className="w-6 h-6 dark:invert" />
+                <img src={aboutimg} alt="About" className="w-6 h-6 invert" />
               </a>
               <a href="#apply" className="p-1">
-                <img src={applyimg} alt="Apply" className="w-6 h-6 dark:invert" />
+                <img src={applyimg} alt="Apply" className="w-6 h-6 invert" />
               </a>
               <a href="#footer" className="p-1">
-                <img src={contactimg} alt="Apply" className="w-6 h-6 dark:invert" />
+                <img src={contactimg} alt="Apply" className="w-6 h-6 invert" />
               </a>
             </div>
           </nav>
