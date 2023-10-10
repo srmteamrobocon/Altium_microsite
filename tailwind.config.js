@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         Orbitron: ['Orbitron', 'sans-serif'],
+        Poppins: ['Poppins', 'sans-serif'],
       },
       backgroundColor: {
         'custom_dark': 'rgb(7, 7, 9)', // Replace with your custom color code
