@@ -36,11 +36,11 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <p className="text-lg mt-12">
+                <p className="text-lg mt-12 px-2">
                     Prepare to unlock the full potential of Altium Designer and elevate your PCB design expertise. Join us in our workshop, meticulously crafted to furnish you with the requisite tools and comprehensive knowledge essential for success in electronic design.
                 </p>
-                <p className="text-lg mt-6">
-                    With limited availability, it is imperative to secure your place today. Seize this opportunity to embark on your journey towards proficiency in PCB design, powered by Altium Designer, a distinguished industry-standard software. Your path to becoming a proficient PCB designer begins here.
+                <p className="text-lg mt-6 px-2">
+                With limited availability, it is imperative to secure your place today. Seize this opportunity to embark on your journey towards proficiency in PCB design, powered by Altium Designer, a distinguished industry-standard software for <span className="text-xl font-bold">Rs 649</span>  only. Your path to becoming a proficient PCB designer begins here. <br/><span className="font-bold text-yellow-400">"The enrolled participants will receive communication regarding the subsequent steps at a later time. "</span>
                 </p>
                 {/* Speaker Section */}
                 <h2 className="text-3xl font-Orbitron font-semibold mb-4 p-4">Meet Our Speaker</h2>
