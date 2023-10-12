@@ -41,7 +41,7 @@ const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-2 pr-2">
                     <div className="md:text-left">
-                        <h3 className="text-xl font-Orbitron font-semibold mb-4 underline">Why Altium Designer?</h3>
+                        <h3 className="text-xl font-Orbitron font-semibold mb-4 underline">Why Altium Designer ?</h3>
                         <p className=" text-gray-300 font-Poppins">
                             As you delve into Altium Designer, you'll discover its prowess in catering to engineers globally. Its extensive feature set covers schematic capture, PCB layout, simulation, and manufacturing capabilities, while its potent design engine effortlessly handles complex projects thus enabling you to turn your creative ideas into functional, manufacturable PCBs.
                         </p>
