@@ -6,6 +6,8 @@ import backgroundImageMobile from '../assets/Altium_mobile.jpg';   // Mobile bac
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
+import Button_pair from './Button_pair'
+
 const Hero = () => {
     const isMobile = window.innerWidth < 769; // Check if the screen width is below 769px
 
@@ -32,7 +34,7 @@ const Hero = () => {
                     className="animate__animated animate__fadeInDown animate__infinite animate__slow animate__delay-1s text-3xl"
                 />
             </div>
-        </div>
+        </div >
     );
 };
 

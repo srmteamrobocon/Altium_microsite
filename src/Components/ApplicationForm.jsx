@@ -9,6 +9,11 @@ const ApplicationForm = () => {
   const [formValid, setFormValid] = useState(true);
   const [submitting, setSubmitting] = useState(false); // Track submission status
   const [success, setSuccess] = useState(false); // Track success status
+  const [payment_buttonPressed, setButtonPressed] = useState(false); //payment button pressed
+
+  const handleButtonPress = () => { //payment button pressed
+    setButtonPressed(true);
+  };
 
 
   const [errors, setErrors] = useState({
@@ -309,6 +314,17 @@ const ApplicationForm = () => {
         </button>
 
       </form>
+      <div className="flex justify-center" id="payment">
+        <a href="https://forms.gle/NDm5b85xbCRknfFZ8" target="_blank" rel="noopener noreferrer">
+          <button
+            className={`w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md ${payment_buttonPressed ? 'bg-green-500' : 'bg-blue-700'
+              } hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]`}
+            onClick={handleButtonPress}
+          >
+            Pay Now
+          </button>
+        </a>
+      </div>
     </>
   );
 };
