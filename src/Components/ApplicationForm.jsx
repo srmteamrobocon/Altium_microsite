@@ -305,7 +305,7 @@ const ApplicationForm = () => {
           onClick={putData}
           disabled={submitting || success} // Disable the button when submitting or after success
         >
-          {submitting ? "Submitting..." : success ? "Submitted!" : "Submit"}
+          {submitting ? "Registering..." : success ? "Registered!" : "Register"}
         </button>
 
       </form>
