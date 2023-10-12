@@ -50,7 +50,7 @@ const ApplicationForm = () => {
       lastName: isLastNameValid ? "" : "Greetings, incomplete human! A last name is missing.",
       phone: isPhoneValid ? "" : "10 digits, please! Phone number, not gibberish.",
       email: isEmailValid ? "" : "Use your SRM email to keep the owls flying!",
-      registrationNumber: isRegNumberValid ? "" : "Error! Your RA number must start with 'RA' of 15 digits.",
+      registrationNumber: isRegNumberValid ? "" : "Error! It must start with 'RA' & is of 15 characters.",
       branch: isBranchValid ? "" : "Boop! Specify your department, it's important. ",
     });
 
