@@ -2,64 +2,24 @@ import React from 'react';
 import './Perks.css';
 
 const Perks = () => {
-
     return (
-        <div className='center-container mt-4'>
-            <div className="card w-[clamp(260px,80%,300px)]">
+        <div className="center-container flex items-center justify-center">
+            <div className="myCard w-[clamp(260px,80%,300px)] m-4 rounded-lg">
+                <div className="innerCard">
+                    <div className="frontSide bg-gradient-to-tl from-indigo-950 to-gray-950 p-2">
+                        <p className="title font-Orbitron">Perks</p>
+                        <small>Hover Me</small>
+                    </div>
 
-                <div className="content">
-                    <div className="back">
-                        <div className="back-content bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950">
-                            {/* <div className="bg-orange-500 w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-red-900 transition-all"></div> */}
-                            <strong className='text-2xl font-Orbitron'>Perks</strong>
-                            <p className='text-sm'>Hover Me</p>
-                        </div>
+                    <div className="backSide font-Poppins p-2">
+                        <p>Interactive Sessions</p>
+                        <p>Altium License</p>
+                        <p>ODs & Refreshments</p>
+                        <p>Competition</p>
+                        <p>Certification</p>
                     </div>
-                    <div className="front">
-                        <div className="img">
-                            <div className="circle"></div>
-                            <div className="circle" id="right"></div>
-                            <div className="circle" id="bottom"></div>
-                        </div>
-                        <div className="front-content font-bold">
-                            <small className="badge">Perks</small>
-                            <div className="description">
-                                <div className="title">
-                                    <ul>
-                                        <li>Interactive Sessions</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="description">
-                                <div className="title">
-                                    <ul>
-                                        <li>Altium License</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="description">
-                                <div className="title">
-                                    <ul>
-                                        <li>ODs and Refreshments</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="description">
-                                <div className="title">
-                                    <ul>
-                                        <li>Competition</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="description">
-                                <div className="title">
-                                    <ul>
-                                        <li>Certification</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div className="h-2 w-full bg-gradient-to-l via-yellow-500 group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+                    <div className="h-0.5 group-hover:w-full bg-gradient-to-l via-yellow-950 group-hover:via-yellow-500 w-[70%] m-auto rounded transition-all"></div>
                 </div>
             </div>
         </div>
