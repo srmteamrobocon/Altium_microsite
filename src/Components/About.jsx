@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "../assets/Roel.jpg";
+import Perks from "./Perks"
 
 const About = () => {
     return (
@@ -58,6 +59,9 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
+                {/* Perks Section */}
+                <Perks />
+
                 <p className="text-lg mt-12 px-2 font-Poppins">
                     Prepare to unlock the full potential of Altium Designer and elevate your PCB design expertise. Join us in our workshop, meticulously crafted to furnish you with the requisite tools and comprehensive knowledge essential for success in electronic design.
                 </p>

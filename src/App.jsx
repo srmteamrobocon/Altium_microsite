@@ -3,7 +3,6 @@ import ApplicationForm from './Components/ApplicationForm'
 import InstagramNavbar from './Components/InstagramNavbar'
 import About from './Components/About'
 import Footer from './Components/Footer'
-import Button_pair from '../src/Components/Button_pair'
 
 function App() {
 
