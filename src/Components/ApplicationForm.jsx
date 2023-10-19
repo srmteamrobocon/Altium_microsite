@@ -130,7 +130,7 @@ const ApplicationForm = () => {
 
   // CONNECT WITH FIREBASE DATABASE
   const dbRefPath = `Registrations/${userdata.registrationNumber}`; //FIREBASE DATABASE REFERENCE PATH FOR EACH USER
-
+  //UNCOMMENT WHEN USING
   const putData = (event) => {
     event.preventDefault(); // Prevent page reload
 
@@ -314,8 +314,10 @@ const ApplicationForm = () => {
         </button>
 
       </form>
+
+      {/* PAYMENT */}
       <div className="flex justify-center" id="payment">
-        <a href="https://forms.gle/NDm5b85xbCRknfFZ8" target="_blank" rel="noopener noreferrer">
+        <a href="PAYMENT_LINK" target="_blank" rel="noopener noreferrer">
           <button
             className={`w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md ${payment_buttonPressed ? 'bg-green-500' : 'bg-blue-700'
               } hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]`}
